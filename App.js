@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import IntroScreen from './Apps/screens/IntroScreen';
+import Navigation from './StackNavigator';
+import { Provider } from 'react-native-paper';
+import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 
-export default function App() {
+export default function App() {    
+  StatusBar.setBarStyle('dark-content')
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider>
+      <Navigation/></Provider>
+      
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create()
